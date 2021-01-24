@@ -1,0 +1,249 @@
+<?php
+    include_once "basetest.php";
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>郭哲嘉 - ZHE JIA</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/mycss.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css'/>
+    <script src="js/myjs.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link rel="icon" href="img/logo.ico" type="image/x-icon" />
+
+<link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+</head>
+<body>
+    <header class="bg-dark fixed-top" id="minMenu">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <button class="navbar-toggler" type="button" data-toggle="#minMenu" >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="minMenu">
+              <a class="navbar-brand" href="#">ZHE -JIA</a>
+              <ul class="navbar-nav ml-auto mt-2 mt-lg-0 ">
+
+                <li class="nav-item ">
+                  <a class="nav-link" href="#autobio" class="fas">自傳 </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="#jobb" class="fas">求職條件 </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#skill" class="fas ">技能</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#por" class="fas ">作品集</a>
+                  </li>
+                  <li class="nav-item">
+                    <?php
+                                                if(isset($_SESSION['admin'])==1){
+
+                                                
+                    ?>
+                    <a class="nav-link" href="backend.php?do=about" class="fas ">管理</a>
+                    <?php
+                    }else{
+                        ?>
+                        <a class="nav-link" href="login.html" class="fas ">登入</a>
+                        <?php
+                    }
+                    ?>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+        </header>
+    <div class="bg abct" >
+        <div class="abdir" >
+            <img src="img/aa.jpg" class="abimg" >
+                <p class="abp" >
+                    姓名：郭哲嘉<br>
+                    性別：男<br>
+                    生日：85/10/11<br>
+                    畢業學校：致理科技大學<br>
+                    科系：資訊管理系<br>
+                    信箱：a8510110981@gmail.com<br>
+                </p>
+        </div>
+
+    </div>
+    <div class="bg-dark biobg" >
+        <div class="container" id="autobio">
+            <div class="container text-white biotitle">自傳</div>
+            <div class="mx-3 biop" >
+                <p>我是郭哲嘉，畢業於致理科技大學，是資訊管理系，對於網頁有很高的興趣，在泰山職訓局學習6個月    的網頁設計，學習了HTML、CSS、PHP、JQ、JS，並且可以用PHP與資料庫溝通，期望能夠成為個後端網頁 設計師</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-dark " style="height: auto;" id="jobb" >
+        <div class="container">
+        <div class="container  text-white jobtitle"  >求職條件</div>
+        <div class="row pt-5">
+
+                <div class="col-lg-4 col-sm-6">
+                    <div class="jobbor ">
+                        <div class="jobi"><i class="fas fa-briefcase"></i></div>
+                            <div>工作</div>
+                            <p class="jobp">前端工程師</p>
+                            <p class="jobp">後端工程師</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="jobbor ">
+                        <div class="jobi"><i class="fab fa-accusoft"></i></div>
+                            <div>工作地點</div>
+                            <p class="jobp">雙北地區</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="jobbor ">
+                        <div class="jobi"><i class="fas fa-address-card"></i></div>
+                            <div>證照</div>
+                            <p class="jobp">網頁設計丙級</p>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="skill " id="skill">
+        <div  class="container" >
+        <div class="skilltitle "  > 專業技能 </div>
+        <div class=" row skillrow" >
+                <div class="col-md-6 row skillcol ">
+                <div class="skillOutt">
+                            <div class="skillTxt">HTML
+                                <div class="skillOut">
+                                    <div class="skillbar" style="width:80%;"></div>
+                                </div>
+                                <h4 class="skillh3">80%</h4>
+                            </div>
+                            <div class="skillTxt">CSS
+                                <div class="skillOut">
+                                    <div class="skillbar" style="width:70%;"></div>
+                                </div>
+                                <h4 class="skillh3">70%</h4>
+                            </div>
+                            <div class="skillTxt">AI
+                                <div class="skillOut">
+                                    <div class="skillbar" style="width:75%;"></div>
+                                </div>
+                                <h4 class="skillh3">75%</h4>
+                            </div>
+                            <div class="skillTxt">PS
+                                <div class="skillOut">
+                                    <div class="skillbar" style="width:90%;"></div>
+                                </div>
+                                <h4 class="skillh3">90%</h4>
+                            </div>
+                            
+                    </div>
+                </div>
+                <div class="col-md-6 row skillcol">
+                <div class="skillOutt">
+                            <div class="skillTxt">PHP
+                                <div class="skillOut">
+                                    <div class="skillbar" style="width:90%;"></div>
+                                </div>
+                                <h4 class="skillh3">90%</h4>
+                            </div>
+                            <div class="skillTxt">JS
+                                <div class="skillOut">
+                                    <div class="skillbar" style="width:60%;"></div>
+                                </div>
+                                <h4 class="skillh3">60%</h4>
+                            </div>
+                            <div class="skillTxt">JQ
+                                <div class="skillOut">
+                                    <div class="skillbar" style="width:70%;"></div>
+                                </div>
+                                <h4 class="skillh3">70%</h4>
+                            </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skill" id="por">
+        <div  class="container portitle">作品集</div>
+            <div class="container" >
+                <div class="row">
+                    <div class="card col-lg-4 col-md-6 porcol">
+                        <div class=" card-group" style="margin:15px">
+                            <div>
+                                <div class="porho">
+                                    <img src="img/invoice2.png" class="porimg">
+                                    <div class="porfont"><h4 >發票系統</h4></div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">發票系統</h5>
+                                <p class="card-text">使用PHP製作發票系統，具備帳號登入驗證、兌獎等功能</p>
+                            </div>
+                            <div class="card-footer" style="width:100%">
+                                <small class=""><a href="http://invoice"><i class="fas fa-link"></i></a></small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card col-lg-4 col-md-6 porcol">
+                        <div class=" card-group" style="margin:15px"  >
+                            <div>
+                                <div class="porho">
+                                    <img src="img/未命名-1.jpg" class="porimg">
+                                    <div class="porfont"><h4 >萬年曆</h4></div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">萬年曆</h5>
+                                <p class="card-text">使用PHP練習PHP基礎程式邏輯設計，具備特定日期顯示</p>
+                            </div>
+                            <div class="card-footer" style="width:100%">
+                                <small class=""><a href="http://calendar"><i class="fas fa-link"></i></a></small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card col-lg-4 col-md-6 porcol">
+                        <div class=" card-group" style="margin:15px"  >
+                            <div>
+                                <div class="porho">
+                                    <img src="img/img1.png" class="porimg">
+                                    <div class="porfont"><h4 >個人履歷表</h4></div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">個人履歷表</h5>
+                                <p class="card-text">使用PHP與部分JS、JQ製作個人履歷表，具備後台更改資料</p>
+                            </div>
+                            <div class="card-footer" style="width:100%">
+                                <small class=""><a href="http://resume"><i class="fas fa-link"></i></a></small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+
+    <div class="footer">
+        <div class="footerbg"></div>
+    </div>
+
+</body>
+
+</html>
+
